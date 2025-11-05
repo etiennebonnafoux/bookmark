@@ -6,8 +6,6 @@
 /*List all entries in the bookmark*/
 int list_bookmark() { 
   char * path = get_path();
-  printf("Hello \n");
-  printf("%s \n",path);
   FILE* fptr;
   fptr = fopen(path,"r");
   if (!fptr){printf("error reading the file \n"); return 1;}

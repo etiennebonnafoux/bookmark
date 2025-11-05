@@ -1,3 +1,5 @@
-- [] Split main with new files list/delete/add
-- [] correct bugs
-- [] put in on Github
+- [ ] Add entry
+- [X] Goto entry
+- [ ] Delete entry
+- [ ] Update entry
+- [ ] Finish configuration get root of user 
