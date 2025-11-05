@@ -9,23 +9,17 @@
 // if not set get the default
 // then check file exist otherwise create it
 char * get_path(){
-  char* path = getenv( "BOOKMARK_PATH" );
-  if (!path){
-    char* homedir = getenv("HOME");
-    if(!homedir){
-      printf("No Home");
-    }
-    strcat(homedir,"/.bookmark");
-    return homedir;
-  }
-  if (path[0]=='\0'){
-    return DEFAULT_PATH;
-  }
-
-  if (isspace(path[0])){
-    return DEFAULT_PATH;
-  }
-
+  char* hdir = getenv("HOME");
+  char* path = (char* )malloc(strlen(hdir)+11*sizeof(hdir[0]));
+  strcpy(path,hdir);
+  strcat(path,"/.bookmark");
   return path;
+}
 
+char* get_path_swap(){
+  char* hdir = getenv("HOME");
+  char* swap_path = (char* )malloc(strlen(hdir)+17*sizeof(hdir[0]));
+  strcpy(swap_path,hdir);
+  strcat(swap_path,"/.swap_bookmark");
+  return swap_path;
 }

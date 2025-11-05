@@ -8,7 +8,7 @@
 #include "goto.h"
 #include "path.h"
 #include "list.h"
-
+#include "delete.h"
 
 
 int add_bookmark(){
@@ -16,33 +16,6 @@ int add_bookmark(){
   return 0;
 }
 
-int delete_bookmark(const char* key_to_delete){
-  printf("deleting some bookmark");
-  char * path = get_path();
-  char data[50];
-  FILE* fptr;
-  FILE* fptr_swp;
-  fptr = fopen(path,"r");
-  fptr_swp = fopen("swap_bookmark","w");
-  if (!fptr){printf("error reading the file \n"); return 1;}
-  if (!fptr_swp){printf("error while opening the swap file \n");}
-  int index_space = 0;
-  while(fgets(data,50,fptr)){
-    for (int i =0; i<50; i++){
-      if (&data[i] == " ")
-      {printf("finding the white space \n");
-        index_space = i;}
-    }
-    if (index_space == 50){
-      printf("Error line without value %s \n",data);
-      fclose(fptr);
-      fclose(fptr_swp);
-      return 1;
-    }
-    fprintf(fptr_swp,data);
-  }
-  return 0;
-}
 
 int help(){
   printf("Help");
