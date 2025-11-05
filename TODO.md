@@ -1,0 +1,3 @@
+- [] Split main with new files list/delete/add
+- [] correct bugs
+- [] put in on Github
