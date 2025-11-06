@@ -1,5 +1,9 @@
-- [ ] Add entry
+- [X] Add entry
 - [X] Goto entry
-- [ ] Delete entry
-- [ ] Update entry
+- [X] Delete entry
+- [X] Update entry
+- [ ] Dealing with non existent file
 - [ ] Finish configuration get root of user 
+- [ ] Better MakeFile
+- [ ] Help message
+- [ ] Man Page

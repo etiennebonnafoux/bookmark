@@ -9,13 +9,7 @@
 #include "path.h"
 #include "list.h"
 #include "delete.h"
-
-
-int add_bookmark(){
-  printf("Adding bookmark");
-  return 0;
-}
-
+#include "add.h"
 
 int help(){
   printf("Help");
@@ -27,7 +21,11 @@ int main(int argc, char **argv) {
     return list_bookmark();
   }
   if (strcmp(argv[1], "-a") == 0) {
-    return add_bookmark();
+    if (argc == 2){
+      printf("A key to add should be given \n");
+      return 1;
+    }
+    return add_bookmark(argv[2]);
   }
   else if (strcmp(argv[1], "-d") == 0) {
     if (argc == 2){

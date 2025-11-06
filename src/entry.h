@@ -1,11 +1,13 @@
 #ifndef BOOKMARK_ENTRY
 #define BOOKMARK_ENTRY
-#define MAXBUFFER 50
 #include <stdio.h>
 
+#define MAX_FIELD_SIZE 100
+#define MAX_LINE_BUFFER (2 * MAX_FIELD_SIZE + 5)
+
 typedef struct {
-	char key[MAXBUFFER];
-	char value[MAXBUFFER];
+	char key[MAX_FIELD_SIZE];
+	char value[MAX_FIELD_SIZE];
 } Entry;
 
 /*parse a line and separate the key and the value
