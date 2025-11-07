@@ -5,5 +5,5 @@
 - [ ] Dealing with non existent file
 - [ ] Finish configuration get root of user 
 - [ ] Better MakeFile
-- [ ] Help message
+- [X] Help message
 - [ ] Man Page
