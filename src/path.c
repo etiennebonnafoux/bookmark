@@ -23,3 +23,14 @@ char* get_path_swap(){
   strcat(swap_path,"/.swap_bookmark");
   return swap_path;
 }
+
+int create_file_if_not_exist(char* path){
+ FILE* fptr = fopen(path,"r");
+ if (fptr == NULL){
+   fptr = fopen(path,"w");
+   fclose(fptr);
+   return 0;
+ }
+ fclose(fptr);
+ return 0;
+}

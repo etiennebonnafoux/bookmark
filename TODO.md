@@ -2,7 +2,7 @@
 - [X] Goto entry
 - [X] Delete entry
 - [X] Update entry
-- [ ] Dealing with non existent file
+- [X] Dealing with non existent file
 - [ ] Finish configuration get root of user 
 - [ ] Better MakeFile
 - [X] Help message

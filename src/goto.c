@@ -9,6 +9,7 @@
 
 int goto_bookmark(char const* target){
 	char * path = get_path();
+  create_file_if_not_exist(path);
 	FILE* fptr;
 	fptr = fopen(path,"r");
   if (!fptr){printf("error reading the file \n");return 1;}

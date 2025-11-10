@@ -7,6 +7,7 @@
 
 int delete_bookmark(const char* key_to_delete){
   char* path = get_path();
+  create_file_if_not_exist(path);
   char* path_swap = get_path_swap();
   FILE* fptr;
   FILE* fptr_swp;
